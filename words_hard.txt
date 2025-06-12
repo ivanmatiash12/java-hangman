@@ -1,0 +1,6 @@
+entwicklung
+netzwerkadapter
+betriebssystem
+verschluesselung
+algorithmus
+w

@@ -1,0 +1,5 @@
+auto
+haus
+hund
+java
+ball
