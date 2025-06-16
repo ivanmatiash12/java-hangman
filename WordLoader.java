@@ -6,7 +6,6 @@ public class WordLoader {
     public static String getZufaelligesWort(String level) {
         String dateiname = switch (level) {
             case "simple" -> "simple.txt";
-            case "middle" -> "middle.txt";
             case "hard" -> "hard.txt";
             default -> "simple.txt";
         };
