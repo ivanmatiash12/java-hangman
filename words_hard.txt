@@ -3,4 +3,3 @@ netzwerkadapter
 betriebssystem
 verschluesselung
 algorithmus
-w
