@@ -6,9 +6,9 @@ public class HangmanGame {
     private static int punktestand = 0;
     private static int spieleGewonnen = 0;
     private static Instant startZeit;
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         startZeit = Instant.now();
 
         while (true) {
@@ -66,5 +66,6 @@ public class HangmanGame {
         System.out.println("punkte: " + punktestand);
         System.out.println("spiele gewonnen: " + spieleGewonnen);
         System.out.println("danke fürs spielen!");
+        scanner.close();
     }
 }
