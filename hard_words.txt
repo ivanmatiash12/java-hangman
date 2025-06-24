@@ -2,4 +2,14 @@ algorithmus
 programmierung
 entwickler
 software
-hardware 
+hardware
+mikroprozessor
+betriebssystem
+verschluesselung
+schnittstelle
+datenbank
+netzwerktechnik
+virtualisierung
+kompilierung
+objektorientierung
+parallelisierung 
