@@ -2,10 +2,11 @@ import java.util.Scanner;
 import java.time.Instant;
 import java.time.Duration;
 
+// hauptklasse für hangman
 public class HangmanGame {
-    private static int punktestand = 0;
-    private static int spieleGewonnen = 0;
-    private static Instant startZeit;
+    private static int punktestand = 0; // punkte
+    private static int spieleGewonnen = 0; // siege
+    private static Instant startZeit; // startzeit
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -42,10 +43,12 @@ public class HangmanGame {
 
                 default:
                     System.out.println("ungültige eingabe.");
+                scanner.close();
             }
         }
     }
 
+    // zeigt erklärungen
     private static void erklaerungenAnzeigen() {
         System.out.println("\n--- erklärungen ---");
         System.out.println("hangman ist ein wortspiel.");
@@ -55,6 +58,7 @@ public class HangmanGame {
         System.out.println("bei gewinn bekommst du einen punkt.");
     }
 
+    // beendet das spiel
     private static void beenden() {
         Instant endeZeit = Instant.now();
         Duration dauer = Duration.between(startZeit, endeZeit);
