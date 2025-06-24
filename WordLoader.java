@@ -2,13 +2,14 @@ import java.io.*;
 import java.nio.file.*;
 import java.util.*;
 
+// lädt wörter aus dateien
 public class WordLoader {
-    public static String getZufaelligesWort(String level) {
+    // gibt ein zufälliges wort je level zurück
+    public static String getRandomWord(String level) {
         String dateiname = switch (level) {
-            case "simple" -> "simple.txt";
-            case "middle" -> "middle.txt";
-            case "hard" -> "hard.txt";
-            default -> "simple.txt";
+            case "easy" -> "easy_words.txt";
+            case "hard" -> "hard_words.txt";
+            default -> "easy_words.txt";
         };
 
         try {

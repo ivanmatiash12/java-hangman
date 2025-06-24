@@ -1,40 +1,23 @@
 import java.util.Scanner;
-import java.util.Random;
 import java.util.Arrays;
 
+// spiellogik für eine runde hangman
 public class HangmanRound {
-    private String[] easyWords = {"computer", "programm", "sprache", "entwicklung", "system"};
-    private String[] hardWords = {"algorithmus", "programmierung", "entwickler", "software", "hardware"};
     private String word;
     private char[] guessedWord;
     private int remainingAttempts;
     private Scanner scanner;
 
+    // konstruktor
     public HangmanRound(String level) {
         scanner = new Scanner(System.in);
         remainingAttempts = level.equals("easy") ? 9 : 7;
-        selectWord(level);
+        word = WordLoader.getRandomWord(level.equals("easy") ? "easy" : "hard");
         guessedWord = new char[word.length()];
         Arrays.fill(guessedWord, '_');
     }
 
-    private void selectWord(String level) {
-        Random random = new Random();
-        String[] wordList;
-        switch (level) {
-            case "easy":
-                wordList = easyWords;
-                break;
-            case "hard":
-                wordList = hardWords;
-                break;
-            default:
-                System.out.println("Ungültige Eingabe. Standardwert für easy verwendet.");
-                wordList = easyWords;
-        }
-        word = wordList[random.nextInt(wordList.length)];
-    }
-
+    // startet die spielrunde
     public boolean start() {
         System.out.println("\nWillkommen zu Hangman!");
         System.out.println("Das Wort hat " + word.length() + " Buchstaben.");
@@ -71,11 +54,13 @@ public class HangmanRound {
         return false;
     }
 
+    // zeigt aktuellen spielstand
     private void displayGameState() {
         System.out.println("\nWort: " + String.valueOf(guessedWord));
         System.out.println("Verbleibende Versuche: " + remainingAttempts);
     }
 
+    // prüft buchstaben
     private boolean makeGuess(char guess) {
         boolean correctGuess = false;
         for (int i = 0; i < word.length(); i++) {
@@ -87,6 +72,7 @@ public class HangmanRound {
         return correctGuess;
     }
 
+    // prüft ob wort erraten
     private boolean isWordGuessed() {
         return String.valueOf(guessedWord).equals(word);
     }
