@@ -19,7 +19,7 @@ public class HangmanRound {
 
     // startet die spielrunde
     public boolean start() {
-        System.out.println("\nWillkommen zu Hangman!");
+        System.out.println("\n----------------------------------Willkommen zu Hangman!----------------------------------");
         System.out.println("Das Wort hat " + word.length() + " Buchstaben.");
      
         while (remainingAttempts > 0) {

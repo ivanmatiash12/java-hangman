@@ -16,7 +16,7 @@ public class HangmanGame {
             System.out.println("\n--- hauptmenü ---");
             System.out.println("1. spiel starten");
             System.out.println("2. erklärungen anzeigen");
-            System.out.println("3. spiel verlassen");
+            System.out.println("3. spiel verlassen\n");
             System.out.print("bitte wähle eine option: ");
 
             String eingabe = scanner.nextLine();
@@ -69,6 +69,7 @@ public class HangmanGame {
         System.out.println("gesamtspielzeit: " + minuten + " minuten und " + sekunden + " sekunden");
         System.out.println("punkte: " + punktestand);
         System.out.println("spiele gewonnen: " + spieleGewonnen);
-        System.out.println("danke fürs spielen!");
+        System.out.println("");
+        System.out.println("Danke Fürs Spielen!\n\n");
     }
 }
